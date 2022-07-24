@@ -1,5 +1,5 @@
 import CalcOperations from "./Components/CalcOperations";
-
+import CalcSquaring   from "./Components/CalcSquaring"
 
 function App() {
   return (
@@ -11,7 +11,17 @@ function App() {
         my knowledges of Javascript HTML and CSS
       </p>
       <hr/>
+      <h2>Addition</h2>
+      <hr/>
       <CalcOperations/>
+      <hr/>
+      <h2>Squaring</h2>
+      <hr/>
+      <CalcSquaring/>
+      <hr/>
+      <h2>Age calcule</h2>
+      <p></p>
+      <hr/>
     </div>
   );
 }

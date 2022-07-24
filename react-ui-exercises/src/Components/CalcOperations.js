@@ -1,5 +1,6 @@
+import "./CalcOperations.css";
 import { useState } from "react";
-
+import Message from "./Message";
 let initialState = {
   suma: "",
 };
@@ -7,12 +8,11 @@ const CalcOperations = () => {
   const [toAdd, setToAdd] = useState(initialState);
   const [addition, setAddition] = useState(0);
 
- 
+  let regExp = /^[0-9,+]*$/;
 
   const handleChange = (e) => {
-   let regExp=/^[0123456789?+]+$/  
-   if(! regExp.test(e.target.value)){
-     
+    let regExp = /^[0-9,+]*$/;
+    if (!regExp.test(e.target.value)) {
     }
 
     setToAdd({
@@ -31,14 +31,14 @@ const CalcOperations = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    operation(toAdd.suma);
+    operation(toAdd.suma)
   };
 
   return (
-    <div>
+    <article className="calcOperations-article">
       <div className="adittion-exercise">
-        <h2>Exercise one</h2>
-        <h3>Addition with React</h3>
+        <h3>Exercise one</h3>
+        <h4>Addition with React</h4>
         <form onSubmit={handleSubmit}>
           <label htmlFor="suma">Addition</label>
 
@@ -51,16 +51,20 @@ const CalcOperations = () => {
             onChange={handleChange}
             value={toAdd.suma}
             required
-            title="Solo se permiten numeros y el simbolo (+)"
+            title="Only numbers and symbol (+)"
+            pattern="^[0-9,+]*$"
           />
           <br />
           <br />
           <input className="submit" type="submit" value={"Addition"} />
-
-          <h4>{addition}</h4>
         </form>
+          {regExp.test(toAdd.suma) ? (
+            <Message msg={addition} bg="#fff" />
+          ) : (
+            <Message msg={"Only numbers and symbol (+)"} bg="#df4235" />
+          )}
       </div>
-    </div>
+    </article>
   );
 };
 

@@ -1,0 +1,16 @@
+.message{
+ margin: .5rem auto;
+ height:2rem;
+ width:40%;
+ border-radius: .25rem;
+ 
+ }
+
+.message p{
+  display:block;
+ padding: .5rem; 
+  font-size: bold ;
+  
+}
+
+
