@@ -1,14 +1,14 @@
-.calcSquaring{
+
+.age-exercise{
  color:#222;
  text-align: center;
  background-color: #aaa;
  padding:.2rem;
  margin: 1rem;
  border:1px solid #000 
-
 }
 
-.calcSquaring h3{
+.age-exercise h3{
  display: inline-block;
  background-color:#61dafb;
  padding:.5rem ;

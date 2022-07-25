@@ -1,5 +1,6 @@
+import Age from "./Components/Age";
 import CalcOperations from "./Components/CalcOperations";
-import CalcSquaring   from "./Components/CalcSquaring"
+import CalcSquaring from "./Components/CalcSquaring";
 
 function App() {
   return (
@@ -10,18 +11,19 @@ function App() {
         programation learned monts before. On this exercises i'm trying to put
         my knowledges of Javascript HTML and CSS
       </p>
-      <hr/>
-      <h2>Addition</h2>
-      <hr/>
-      <CalcOperations/>
-      <hr/>
-      <h2>Squaring</h2>
-      <hr/>
-      <CalcSquaring/>
-      <hr/>
-      <h2>Age calcule</h2>
-      <p></p>
-      <hr/>
+      <hr />
+      <h2>Addition :</h2>
+
+      <CalcOperations />
+      <hr />
+      <h2>Squaring :</h2>
+
+      <CalcSquaring />
+      <hr />
+      <h2>Age calcule :</h2>
+
+      <Age />
+      <hr />
     </div>
   );
 }

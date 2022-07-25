@@ -22,4 +22,8 @@ body {
   background-color: #222;
 }
 
- 
+h2{
+color:#61dafb;
+ display:inline-block;
+ margin-left: 1rem;
+} 

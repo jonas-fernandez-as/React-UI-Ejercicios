@@ -31,7 +31,7 @@ const CalcOperations = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    operation(toAdd.suma)
+    operation(toAdd.suma);
   };
 
   return (
@@ -58,11 +58,11 @@ const CalcOperations = () => {
           <br />
           <input className="submit" type="submit" value={"Addition"} />
         </form>
-          {regExp.test(toAdd.suma) ? (
-            <Message msg={addition} bg="#fff" />
-          ) : (
-            <Message msg={"Only numbers and symbol (+)"} bg="#df4235" />
-          )}
+        {regExp.test(toAdd.suma) ? (
+          <Message msg={addition} bg="#fff" />
+        ) : (
+          <Message msg={"Only numbers and symbol (+)"} bg="#df4235" />
+        )}
       </div>
     </article>
   );
