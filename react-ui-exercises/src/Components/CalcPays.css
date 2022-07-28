@@ -1,14 +1,13 @@
-
-.age-exercise{
+.pays-exercise{
  color:#222;
  text-align: center;
- background-color: #aaa;
+ background-color: #ddd;
  padding:.2rem;
  margin: 1rem;
  border:1px solid #000 
 }
 
-.age-exercise h3{
+.pays-exercise h3{
  display: inline-block;
  background-color:#61dafb;
  padding:.5rem ;

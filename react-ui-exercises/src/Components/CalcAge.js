@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Age.css";
+import "./CalcAge.css";
 import Message from "./Message";
 
 let initialState = {
@@ -7,7 +7,7 @@ let initialState = {
   born: " ",
 };
 
-export default function Age() {
+export default function CalcAge() {
   const [form, setForm] = useState(initialState);
   const [age, setAge] = useState("");
 
@@ -31,7 +31,7 @@ export default function Age() {
   return (
     <article>
       <div className="age-exercise">
-        <h3>Exercise three</h3>
+        <h3>Exercise thre</h3>
         <p>
           <i>
             Challenge: make a program that allows you to enter the current year

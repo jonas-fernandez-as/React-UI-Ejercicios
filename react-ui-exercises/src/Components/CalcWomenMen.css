@@ -1,5 +1,4 @@
-
-.adittion-exercise{
+.womanmen-exercise{
  color:#222;
  text-align: center;
  background-color: #ddd;
@@ -8,11 +7,11 @@
  border:1px solid #000 
 }
 
-.adittion-exercise h3{
+.womanmen-exercise h3{
  display: inline-block;
  background-color:#61dafb;
  padding:.5rem ;
- border-radius: 0.25rem;
+ border-radius: 0.25rem
 }
 
 input[type=text]{
@@ -28,7 +27,7 @@ input[type=submit]{
  outline:none;
  border-radius:0.25rem;
  border:0.5px solid #777;
- padding:0.25rem;
+ padding:.25rem;
  cursor:pointer;
  margin:.2rem;
 }

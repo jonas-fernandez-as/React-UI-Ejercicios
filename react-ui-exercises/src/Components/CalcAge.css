@@ -1,5 +1,5 @@
 
-.adittion-exercise{
+.age-exercise{
  color:#222;
  text-align: center;
  background-color: #ddd;
@@ -8,11 +8,11 @@
  border:1px solid #000 
 }
 
-.adittion-exercise h3{
+.age-exercise h3{
  display: inline-block;
  background-color:#61dafb;
  padding:.5rem ;
- border-radius: 0.25rem;
+ border-radius: 0.25rem
 }
 
 input[type=text]{

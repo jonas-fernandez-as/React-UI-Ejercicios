@@ -1,0 +1,9 @@
+h2{
+ display:inline-block;
+ text-align: center;
+ letter-spacing: 1rem;
+}
+p{
+ padding:2rem;
+ letter-spacing: 2px;
+}

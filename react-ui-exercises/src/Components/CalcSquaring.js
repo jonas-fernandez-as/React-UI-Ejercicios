@@ -50,7 +50,7 @@ export default function Squaring() {
         />
         <br />
         <br />
-        <input type="submit" />
+        <input type="submit" value="Calculate" />
       </form>
         {regExp.test(number.squaring) ? (
           <Message msg={`${total}`} bg="#fff" />

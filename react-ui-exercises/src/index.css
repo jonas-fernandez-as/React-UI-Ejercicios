@@ -22,8 +22,33 @@ body {
   background-color: #222;
 }
 
+h1{
+  letter-spacing: 1rem;
+  padding: 1rem;
+}
+
+
 h2{
 color:#61dafb;
  display:inline-block;
  margin-left: 1rem;
+ letter-spacing: 1rem;
 } 
+
+h3{
+  letter-spacing: 0.5rem;
+}
+
+h4{
+  letter-spacing: .2rem;
+}
+
+
+input[type=text]:focus{
+  
+  border-color: #fff;
+}
+
+div{
+  border-radius: .25rem;
+}
