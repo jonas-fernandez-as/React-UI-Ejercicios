@@ -31,7 +31,7 @@ export default function CalcAge() {
   return (
     <article>
       <div className="age-exercise">
-        <h3>Exercise thre</h3>
+        <h3>Exercise three</h3>
         <p>
           <i>
             Challenge: make a program that allows you to enter the current year

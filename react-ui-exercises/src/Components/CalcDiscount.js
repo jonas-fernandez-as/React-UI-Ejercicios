@@ -32,8 +32,10 @@ export default function CalcDiscount() {
       <div className="discount-exercise">
         <h3>Exercise eight</h3>
         <p>
+          <i>
           Challenge: make a program that calculate a discount of 15% from total
-          of pays from delivery sell and shows total and discount on window{" "}
+          of pays from delivery sell and shows total and discount on window
+          </i>
         </p>
         <h4>Discount with React</h4>
 

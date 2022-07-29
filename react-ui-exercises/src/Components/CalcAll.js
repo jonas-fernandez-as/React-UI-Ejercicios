@@ -46,10 +46,11 @@ export default function CalcAll() {
     <article>
       <div className="calcall-exercise">
         <h3>Exercise ten</h3>
-        <p>
+        <p><i>
           Challenge: create a program that you be able to insert two numbers.
           The program returns the addition the substraction the division and the
-          multiplication of both numbers{" "}
+          multiplication of both numbers
+          </i>
         </p>
         <h4>Calculate operations</h4>
         <form onSubmit={handleSubmit}>

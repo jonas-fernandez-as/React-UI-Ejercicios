@@ -35,9 +35,11 @@ export default function CalcWomanMen() {
       <div className="womanmen-exercise">
         <h3>Exercise nine</h3>
         <p>
+          <i>
           Challenge: a university wants to know percents of women and men.
           Create a program where you can insert the number of women and men and
           calculate the percent of both genders.
+          </i>
         </p>
         <h4>Calculate women and men</h4>
 

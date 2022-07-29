@@ -37,10 +37,12 @@ export default function CalcDistance() {
       <div className="distance-exercise">
         <h3>Exercise four</h3>
         <p>
+          <i>
           Challenge: make a program that allows you to put kilometers between
           two cities and calculate the speed promedium of a vehicule. Calculate
           and shows on the window the time to arrive from one site to another
           watching the entered data
+          </i>
         </p>
         <h4>Calculate kilometers with react</h4>
 

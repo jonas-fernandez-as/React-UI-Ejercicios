@@ -1,6 +1,6 @@
 import CalcAge from "../Components/CalcAge";
 
-export default function Thre() {
+export default function Three() {
   return(
   <div>
     <br />

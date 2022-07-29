@@ -10,7 +10,7 @@ import One from "../pages/ex-one";
 import Seven from "../pages/ex-seven";
 import Six from "../pages/ex-six";
 import Ten from "../pages/ex-ten";
-import Thre from "../pages/ex-thre";
+import Three from "../pages/ex-three";
 import Two from "../pages/ex-two";
 import ConditionalRoute from "./ConditionalRoute";
 import CondOne from "./CondOne";
@@ -38,7 +38,7 @@ const Rout = () => {
           <Route path="/sequentials" element={<SequentialRoute />} />
           <Route path="/sequentials/exercise-one" element={<One />} />
           <Route path="/sequentials/exercise-two" element={<Two />} />
-          <Route path="/sequentials/exercise-thre" element={<Thre />} />
+          <Route path="/sequentials/exercise-three" element={<Three />} />
           <Route path="/sequentials/exercise-four" element={<Four />} />
           <Route path="/sequentials/exercise-five" element={<Five />} />
           <Route path="/sequentials/exercise-six" element={<Six />} />

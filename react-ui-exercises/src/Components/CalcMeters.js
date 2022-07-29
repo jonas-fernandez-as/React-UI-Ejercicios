@@ -37,10 +37,11 @@ export default function CalcMeters() {
     <article>
       <div className="meters-exercise">
         <h3>Exercise seven</h3>
-        <p>
+        <p><i>
           Challenge: make a program that abbles you to insert a total squared
           meters of an space and total covered squared meters. Finally show's on
           window not covered total percent and covered meters total percent
+          </i>
         </p>
         <h4>Squared meters on React</h4>
         <form onSubmit={handleSubmit}>
@@ -50,7 +51,7 @@ export default function CalcMeters() {
           <input
             type="text"
             name="total"
-            placeholder="Insert total meters"
+            placeholder="Insert total squared meters"
             required
             pattern="^[0-9.\s]+$"
             title="Only numbers"
@@ -65,7 +66,7 @@ export default function CalcMeters() {
           <input
             type="text"
             name="covered"
-            placeholder="Insert total covered meters"
+            placeholder="Insert total covered squared meters"
             required
             pattern="^[0-9.\s]+$"
             title="Only numbers"

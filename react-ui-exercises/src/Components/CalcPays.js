@@ -32,9 +32,11 @@ export default function CalcPays() {
     <div className="pays-exercise">
       <h3>Exercise five</h3>
       <p>
+        <i>
         Challenge: calculate the payment to employes. Fixed salary $15000 and
         comition of 5% of mensual sells. Make a program that returns total
         salary on the window.
+        </i>
       </p>
       <h4>Calc pays with React</h4>
       <form onSubmit={handleSubmit}>

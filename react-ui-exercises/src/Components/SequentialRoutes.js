@@ -14,7 +14,7 @@ const SequentialRoute = () => {
               <Link to="/sequentials/exercise-two">Two</Link>
             </li>
             <li>
-              <Link to="/sequentials/exercise-thre">Thre</Link>
+              <Link to="/sequentials/exercise-three">Three</Link>
             </li>
             <li>
               <Link to="/sequentials/exercise-four">Four</Link>

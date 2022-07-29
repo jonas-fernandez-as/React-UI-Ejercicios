@@ -32,8 +32,10 @@ export default function CalcProm() {
       <div className="prom-exercise">
         <h3>Exercise six</h3>
         <p>
+          <i>
           Challenge: make a program that returns the promedius of three
           califications
+          </i>
         </p>
         <h4>Calification promedius</h4>
         <form onSubmit={handleSubmit}>
