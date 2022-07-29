@@ -1,5 +1,7 @@
-import "./Router.css"
+import "./Router.css";
 import { HashRouter, Link, Route, Routes } from "react-router-dom";
+import Index from "../pages";
+import SequentialRoute from "./SequentialRoutes";
 import Eight from "../pages/ex-eight";
 import Five from "../pages/ex-five";
 import Four from "../pages/ex-four";
@@ -10,69 +12,46 @@ import Six from "../pages/ex-six";
 import Ten from "../pages/ex-ten";
 import Thre from "../pages/ex-thre";
 import Two from "../pages/ex-two";
-import Index from "../pages";
+import ConditionalRoute from "./ConditionalRoute";
+import CondOne from "./CondOne";
 
 const Rout = () => {
-  return(
-  <div>
-    <h1>Exercises on React</h1>
-    <HashRouter>
-      <nav>
-        <ul>
-          <li>
-
-           <Link to="/">Home</Link>
-          </li>
-          <li>
-            
-            <Link to="/exercise-one">Exercise One</Link>
-          </li>
-          <li>
-            <Link to="/exercise-two">Exercise Two</Link>
-          </li>
-          <li>
-            <Link to="/exercise-thre">Exercise Thre</Link>
-          </li>
-          <li>
-            <Link to="/exercise-four">Exercise Four</Link>
-          </li>
-          <li>
-            <Link to="/exercise-five">Exercise Five</Link>
-          </li>
-          <li>
-            <Link to="/exercise-six">Exercise Six</Link>
-          </li>
-          <li>
-            <Link to="/exercise-seven">Exercise Seven</Link>
-          </li>
-          <li>
-            <Link to="/exercise-eight">Exercise Eigth</Link>
-          </li>
-          <li>
-            <Link to="/exercise-nine">Exercise Nine</Link>
-          </li>
-          <li>
-            <Link to="/exercise-ten">Exercise Ten</Link>
-          </li>
-        </ul>
-      </nav>
-
-      <Routes>
-        <Route index element={<Index/>}/>
-        <Route path="/exercise-one" element={<One/>}/>
-        <Route path="/exercise-two" element={<Two/>}/>
-        <Route path="/exercise-thre" element={<Thre/>}/>
-        <Route path="/exercise-four" element={<Four/>}/>
-        <Route path="/exercise-five" element={<Five/>}/>
-        <Route path="/exercise-six" element={<Six/>}/>
-        <Route path="/exercise-seven" element={<Seven/>}/>
-        <Route path="/exercise-eight" element={<Eight/>}/>
-        <Route path="/exercise-nine" element={<Nine/>}/>
-        <Route path="/exercise-ten" element={<Ten/>}/>
-      </Routes>
-    </HashRouter>
-  </div>
-  )
+  return (
+    <div>
+      <h1>Exercises on React</h1>
+      <HashRouter>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/sequentials">Sequential</Link>
+            </li>
+            <li>
+              <Link to="/conditionals">Conditionals</Link>
+            </li>
+          </ul>
+        </nav>
+        <Routes>
+          <Route index element={<Index />} />
+          <Route path="/sequentials" element={<SequentialRoute />} />
+          <Route path="/sequentials/exercise-one" element={<One />} />
+          <Route path="/sequentials/exercise-two" element={<Two />} />
+          <Route path="/sequentials/exercise-thre" element={<Thre />} />
+          <Route path="/sequentials/exercise-four" element={<Four />} />
+          <Route path="/sequentials/exercise-five" element={<Five />} />
+          <Route path="/sequentials/exercise-six" element={<Six />} />
+          <Route path="/sequentials/exercise-seven" element={<Seven />} />
+          <Route path="/sequentials/exercise-eight" element={<Eight />} />
+          <Route path="/sequentials/exercise-nine" element={<Nine />} />
+          <Route path="/sequentials/exercise-ten" element={<Ten />} />
+          <Route path="/conditionals" element={<ConditionalRoute/>}/>
+          <Route path="/conditionals/exercise-one" element={<CondOne/>}/>
+        </Routes>
+      </HashRouter>
+    </div>
+  );
 };
 
 export default Rout;

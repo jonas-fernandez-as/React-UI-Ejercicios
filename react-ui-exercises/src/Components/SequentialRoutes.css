@@ -1,13 +1,21 @@
-ol{
- display:inline
+nav{
+
+ display:flex;
+ flex-direction: column;
+ flex-wrap: wrap;
+}
+
+ul{
+ display:block;
+ flex-direction: column;
 }
 
 li{
  text-decoration: none;
  color:#fff;
- display:inline-block;
  padding:.5rem;
  letter-spacing: 2px;
+ display: block;
 }
 
 a{
