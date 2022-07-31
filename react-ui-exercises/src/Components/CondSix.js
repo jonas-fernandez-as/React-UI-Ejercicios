@@ -1,4 +1,4 @@
-import "./CondOne.css";
+import "./CondSix.css";
 import { useState } from "react";
 import Message from "./Message";
 
@@ -8,17 +8,20 @@ let initialState = {
 
 let regExp = /^[0-9.\s-]+$/;
 
-const CondOne = () => {
+const CondSix = () => {
   const [form, setForm] = useState(initialState);
   const [res, setRes] = useState("");
-  const majorMinor = (num) => {
-    if (num < 10) setRes(`Number "${num}" is minor than 10`);
-    if (num > 10) setRes(`Number "${num}" is major than 10`);
+
+  const pair = (num) => {
+    let n1=parseInt(num)
+    if (n1 <= 999) setRes(`Total: $${n1+0}`);
+    if (n1 >= 1000 && n1 <=4999) setRes(`Total: $${n1-(n1*0.10)}`); 
+    if(n1 >= 5000) setRes(`Total: $${n1-(n1*0.18)}`);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    majorMinor(form.number);
+    pair(form.number);
   };
 
   const handleChange = (e) => {
@@ -29,16 +32,30 @@ const CondOne = () => {
   };
   return (
     <div>
-        <div className="condOne-exercise">
-        <h3>Exercise one</h3>
+      <div className="condSix-exercise">
+        <h3>Exercise Six</h3>
         <p>
           <i>
-            Challenge: make a program that you be able to put a number and will
-            returns "major" if its greater than ten or "minor" if is less than
-            ten{" "}
-          </i>
-        </p>
-        <h4>Major and minor with React</h4>
+            <b>Challenge:</b> make a program that you be able to put a total of
+            sellings.
+            </i>
+            </p>
+            <ul>
+              <li>
+            <b> If</b> total of buys of the client is minor of $1000 does not
+            apply discount.
+             </li>
+             <li>
+             <b> If </b> the total of buys are major than $1000 but minor
+            to $5000 applys 10% of discount.
+            </li>
+            <li>
+            <b> If </b> the total of buys are more than
+            $5000 applys discount of 18% .Finally the program will show the total import with discount applied
+            </li>
+            </ul>
+        
+        <h4>Total sells</h4>
         <form onSubmit={handleSubmit}>
           <label htmlFor="number">Number</label>
           <br />
@@ -55,8 +72,6 @@ const CondOne = () => {
           <br />
           <br />
           <input type="submit" value={"Check number"} />
-          <br />
-          <br />
         </form>
         {regExp.test(form.number) ? (
           <Message msg={res} bg={"transparent"} />
@@ -68,4 +83,4 @@ const CondOne = () => {
   );
 };
 
-export default CondOne;
+export default CondSix;

@@ -1,24 +1,29 @@
-import "./CondOne.css";
+import "./CondTen.css";
 import { useState } from "react";
 import Message from "./Message";
 
 let initialState = {
-  number: " ",
+  number1: " ",
 };
 
 let regExp = /^[0-9.\s-]+$/;
 
-const CondOne = () => {
+const CondTen = () => {
   const [form, setForm] = useState(initialState);
   const [res, setRes] = useState("");
-  const majorMinor = (num) => {
-    if (num < 10) setRes(`Number "${num}" is minor than 10`);
-    if (num > 10) setRes(`Number "${num}" is major than 10`);
+  const compare = (num1) => {
+    let n1 = parseInt(num1);
+    if (n1 <= 60 ) {
+      setRes(`${n1} minutes equals to ${(n1/60).toFixed(2)} hours`);
+    } 
+    else{
+      setRes(`${n1} minutes equals to ${(n1/60).toFixed(0)} hours ${n1%60} minutes `)
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    majorMinor(form.number);
+    compare(form.number1);
   };
 
   const handleChange = (e) => {
@@ -29,36 +34,36 @@ const CondOne = () => {
   };
   return (
     <div>
-        <div className="condOne-exercise">
-        <h3>Exercise one</h3>
+      <div className="condTen-exercise">
+        <h3>Exercise Ten</h3>
         <p>
           <i>
-            Challenge: make a program that you be able to put a number and will
-            returns "major" if its greater than ten or "minor" if is less than
-            ten{" "}
+            Challenge: make a program that you be able to put a number expresed
+            on minutes. If the value is major than 60 will return the value
+            expresed on hours
           </i>
         </p>
-        <h4>Major and minor with React</h4>
+        <h4>Minutes-Hours with React</h4>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="number">Number</label>
+          <label htmlFor="number1">Number one</label>
           <br />
           <br />
           <input
             type="text"
-            name="number"
+            name="number1"
             placeholder="Please insert a number"
             required
             pattern="^[0-9.\s-]+$"
             onChange={handleChange}
-            value={form.number}
+            value={form.number1}
           />
           <br />
           <br />
-          <input type="submit" value={"Check number"} />
+          <input type="submit" value={"Compare numbers"} />
           <br />
           <br />
         </form>
-        {regExp.test(form.number) ? (
+        {regExp.test(form.number1) ? (
           <Message msg={res} bg={"transparent"} />
         ) : (
           <Message msg={"Only numbers"} bg={"#df4235"} />
@@ -68,4 +73,4 @@ const CondOne = () => {
   );
 };
 
-export default CondOne;
+export default CondTen;

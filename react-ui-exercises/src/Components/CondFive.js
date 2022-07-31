@@ -1,4 +1,4 @@
-import "./CondOne.css";
+import "./CondFive.css";
 import { useState } from "react";
 import Message from "./Message";
 
@@ -8,17 +8,18 @@ let initialState = {
 
 let regExp = /^[0-9.\s-]+$/;
 
-const CondOne = () => {
+const CondFive = () => {
   const [form, setForm] = useState(initialState);
   const [res, setRes] = useState("");
-  const majorMinor = (num) => {
-    if (num < 10) setRes(`Number "${num}" is minor than 10`);
-    if (num > 10) setRes(`Number "${num}" is major than 10`);
+
+  const pair = (num) => {
+    if (num % 2 === 0) setRes(`Number "${num}" is pair`);
+    else setRes(`Number "${num}" is not pair`);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    majorMinor(form.number);
+    pair(form.number);
   };
 
   const handleChange = (e) => {
@@ -29,16 +30,20 @@ const CondOne = () => {
   };
   return (
     <div>
-        <div className="condOne-exercise">
-        <h3>Exercise one</h3>
+      <div className="condFive-exercise">
+        <h3>Exercise Five</h3>
         <p>
           <i>
-            Challenge: make a program that you be able to put a number and will
-            returns "major" if its greater than ten or "minor" if is less than
-            ten{" "}
+            <b>Challenge:</b> make a program that you be able to put a number
+            and will returns
           </i>
         </p>
-        <h4>Major and minor with React</h4>
+        <ul>
+          <li><b>"Positive"</b> if its positive ,</li>
+          <li><b>"Negative"</b> if its negative</li>
+          <li><b>"Zero"</b> if its equal zero</li>
+        </ul>
+        <h4>Pair - odd with React</h4>
         <form onSubmit={handleSubmit}>
           <label htmlFor="number">Number</label>
           <br />
@@ -68,4 +73,4 @@ const CondOne = () => {
   );
 };
 
-export default CondOne;
+export default CondFive;

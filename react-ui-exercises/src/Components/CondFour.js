@@ -1,4 +1,4 @@
-import "./CondOne.css";
+import "./CondFour.css";
 import { useState } from "react";
 import Message from "./Message";
 
@@ -6,19 +6,24 @@ let initialState = {
   number: " ",
 };
 
+
 let regExp = /^[0-9.\s-]+$/;
 
-const CondOne = () => {
+const CondFour = () => {
   const [form, setForm] = useState(initialState);
   const [res, setRes] = useState("");
-  const majorMinor = (num) => {
-    if (num < 10) setRes(`Number "${num}" is minor than 10`);
-    if (num > 10) setRes(`Number "${num}" is major than 10`);
-  };
+
+  const posNegZero = (num) => {
+    if (Math.sign(num)=== -1) setRes(`Number "${num}" is negative`);
+    if (Math.sign(num)=== +1) setRes(`Number "${num}" is positive`);
+    if (Math.sign(num)=== 0) setRes(`Number "${num}" is zero`);
+      
+    }
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    majorMinor(form.number);
+    posNegZero(form.number);
   };
 
   const handleChange = (e) => {
@@ -29,16 +34,16 @@ const CondOne = () => {
   };
   return (
     <div>
-        <div className="condOne-exercise">
-        <h3>Exercise one</h3>
+      <div className="condFour-exercise">
+        <h3>Exercise Four</h3>
         <p>
           <i>
             Challenge: make a program that you be able to put a number and will
-            returns "major" if its greater than ten or "minor" if is less than
-            ten{" "}
+            returns "Positive" if its positive , "Negative" if is negative or
+            "Zero" if its equal zero{" "}
           </i>
         </p>
-        <h4>Major and minor with React</h4>
+        <h4>Positive , negative o zero with React</h4>
         <form onSubmit={handleSubmit}>
           <label htmlFor="number">Number</label>
           <br />
@@ -68,4 +73,4 @@ const CondOne = () => {
   );
 };
 
-export default CondOne;
+export default CondFour;
