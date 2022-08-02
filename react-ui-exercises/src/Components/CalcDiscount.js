@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./CalcDiscount.css";
+import Message from "./Message";
 
 let initialState = {
   total: " ",

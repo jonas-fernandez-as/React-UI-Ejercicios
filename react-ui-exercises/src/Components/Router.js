@@ -23,6 +23,10 @@ import Cond07 from "../pages/cond07";
 import Cond08 from "../pages/cond08";
 import Cond09 from "../pages/cond09";
 import Cond10 from "../pages/cond10";
+import ConditionalReducerRoute from "./ConditionalReducerRouter";
+import CondR01 from "../pages/condR01";
+import CondR02 from "../pages/condR02";
+import CondR03 from "../pages/condR03";
 const Rout = () => {
   return (
     <div>
@@ -39,6 +43,9 @@ const Rout = () => {
             <li>
               <Link to="/conditionals">Conditionals</Link>
             </li>
+            <li>
+            <Link to="/conditionals-reducer">Conditionals with Reducers</Link>
+            </li>
           </ul>
         </nav>
         <Routes>
@@ -54,18 +61,33 @@ const Rout = () => {
           <Route path="/sequentials/exercise-eight" element={<Eight />} />
           <Route path="/sequentials/exercise-nine" element={<Nine />} />
           <Route path="/sequentials/exercise-ten" element={<Ten />} />
-          <Route path="/conditionals" element={<ConditionalRoute/>}/>
-          <Route path="/conditionals/exercise-one" element={<Cond01/>}/>
-          <Route path="/conditionals/exercise-two" element={<Cond02/>}/>
-          <Route path="/conditionals/exercise-three" element={<Cond03/>}/>
-          <Route path="/conditionals/exercise-four" element={<Cond04/>}/>
-          <Route path="/conditionals/exercise-five" element={<Cond05/>}/>
-          <Route path="/conditionals/exercise-six" element={<Cond06/>}/>
-          <Route path="/conditionals/exercise-seven" element={<Cond07/>}/>
-          <Route path="/conditionals/exercise-eight" element={<Cond08/>}/>
-          <Route path="/conditionals/exercise-nine" element={<Cond09/>}/>
-          <Route path="/conditionals/exercise-ten" element={<Cond10/>}/>
-
+          <Route path="/conditionals" element={<ConditionalRoute />} />
+          <Route path="/conditionals/exercise-one" element={<Cond01 />} />
+          <Route path="/conditionals/exercise-two" element={<Cond02 />} />
+          <Route path="/conditionals/exercise-three" element={<Cond03 />} />
+          <Route path="/conditionals/exercise-four" element={<Cond04 />} />
+          <Route path="/conditionals/exercise-five" element={<Cond05 />} />
+          <Route path="/conditionals/exercise-six" element={<Cond06 />} />
+          <Route path="/conditionals/exercise-seven" element={<Cond07 />} />
+          <Route path="/conditionals/exercise-eight" element={<Cond08 />} />
+          <Route path="/conditionals/exercise-nine" element={<Cond09 />} />
+          <Route path="/conditionals/exercise-ten" element={<Cond10 />} />
+          <Route
+            path="/conditionals-reducer"
+            element={<ConditionalReducerRoute />}
+          />
+          <Route
+            path="/conditionals-reducer/exercise-one"
+            element={<CondR01 />}
+          />
+          <Route
+            path="/conditionals-reducer/exercise-two"
+            element={<CondR02 />}
+          />
+          <Route
+            path="/conditionals-reducer/exercise-three"
+            element={<CondR03 />}
+          />
         </Routes>
       </HashRouter>
     </div>
