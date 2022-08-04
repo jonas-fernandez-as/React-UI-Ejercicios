@@ -15,19 +15,14 @@ export default function Cond13() {
   const [state, dispatch] = useReducer(cond13Reducer, InitialState);
   const [form, setForm] = useState(initialForm);
 
-  const directAprobation = () =>
-    dispatch({ type: TYPES.DIRECT_APROBATION});
-  const takeFinalExam = () =>
-    dispatch({ type: TYPES.TAKE_FINAL_EXAM });
+  const directAprobation = () => dispatch({ type: TYPES.DIRECT_APROBATION });
+  const takeFinalExam = () => dispatch({ type: TYPES.TAKE_FINAL_EXAM });
   const reprobateMustAppeal = () =>
     dispatch({ type: TYPES.REPROBATE_MUST_APPEAL });
 
-    const minor0 = () =>
-    dispatch({ type: TYPES.MINOR_0 });
+  const minor0 = () => dispatch({ type: TYPES.MINOR_0 });
 
-    const major10 = () =>
-    dispatch({ type: TYPES.MAJOR_10 });
-
+  const major10 = () => dispatch({ type: TYPES.MAJOR_10 });
 
   const handleSubmit = (e) => {
     let n1 = form.qualification1;
@@ -36,29 +31,49 @@ export default function Cond13() {
     if (n1 >= 8 && n2 >= 8) {
       directAprobation();
     }
-    if (
-      (n1 >= 6 && n1 < 8) || (n2 >= 6 && n2 < 8) 
-      
-    ) {
+    if ((n1 >= 6 && n1 < 8) || (n2 >= 6 && n2 < 8)) {
       takeFinalExam();
     }
     if (n1 < 6 || n2 < 6) {
       reprobateMustAppeal();
     }
-    if(n1<0 || n2<0){
-      minor0()
+    if (n1 < 0 || n2 < 0) {
+      minor0();
     }
-    if(n1>10 || n2>10){
-     major10()
+    if (n1 > 10 || n2 > 10) {
+      major10();
     }
-
   };
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   return (
-    <div className="condThirteen-exercise">
+    <div className="condFourteen-exercise">
+      <h3>Exercise Three - Reducer</h3>
+      <p>
+        <i>
+          Challenge: make a program that you be able to insert two qualifications of
+          exams and return
+        </i>
+      </p>
+      <ul>
+        <li>
+          If both qualifications are major than 8 display this message : "Direct
+          aprobation"{" "}
+        </li>
+        <li>
+          If any of two qualifications are major than 6 (aproval with 6) but
+          minor than 8 display this message : "Take final exam"
+        </li>
+        <li>
+        If any of two qualifications are minor than 6 display this message : "Reprobate, must repeat curriculum"
+        </li>
+        
+      </ul>
+
+      <h4>Qualifications with React reducer</h4>
+
       <form onSubmit={handleSubmit}>
         <label htmlFor="qualification1">Qualification one</label>
         <br />
@@ -92,10 +107,10 @@ export default function Cond13() {
         <br />
         <input type="submit" value="Average"></input>
       </form>
-      {regExp.test(form.qualification1) && regExp.test(form.qualification1) ? (
+      {regExp.test(form.qualification2) && regExp.test(form.qualification1) ? (
         <Message msg={state.average} bg={"transparent"} />
       ) : (
-        <Message msg={"Only numbers"} bg={"transparent"} />
+        <Message msg={"Only numbers"} bg={"#df4235"} />
       )}
     </div>
   );

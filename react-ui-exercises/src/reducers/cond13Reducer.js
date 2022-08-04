@@ -12,7 +12,7 @@ export function cond13Reducer (state,action){
    case TYPES.TAKE_FINAL_EXAM:
     return {average: "Take final exam"}
     case TYPES.REPROBATE_MUST_APPEAL:
-     return {average: "Reprobate, must appeal"} 
+     return {average: "Reprobate, must repeat curriculum"} 
    case TYPES.MAJOR_10:
      return {average:"Numbers major than 10 are not permitted"} 
    case TYPES.MINOR_0:

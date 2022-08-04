@@ -16,6 +16,12 @@ const ConditionalReducerRoute = () => {
           <li>
             <Link to="/conditionals-reducer/exercise-three">Three</Link>
           </li>
+          <li>
+            <Link to="/conditionals-reducer/exercise-four">Four</Link>
+          </li>
+          <li>
+            <Link to="/conditionals-reducer/exercise-five">Five</Link>
+          </li>
         </ul>
       </nav>
     </div>

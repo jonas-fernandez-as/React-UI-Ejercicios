@@ -1,0 +1,11 @@
+select, option{
+ padding:.5rem;
+ outline:none;
+ border-radius:0.25rem;
+ border:0.5px solid #777;
+ background-color: #fff;
+ width: 8rem;
+ text-align: center;
+ font-weight: bold;
+}
+

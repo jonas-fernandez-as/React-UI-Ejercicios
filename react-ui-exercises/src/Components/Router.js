@@ -27,6 +27,8 @@ import ConditionalReducerRoute from "./ConditionalReducerRouter";
 import CondR01 from "../pages/condR01";
 import CondR02 from "../pages/condR02";
 import CondR03 from "../pages/condR03";
+import CondR04 from "../pages/condR04";
+import CondR05 from "../pages/condR05";
 const Rout = () => {
   return (
     <div>
@@ -44,7 +46,7 @@ const Rout = () => {
               <Link to="/conditionals">Conditionals</Link>
             </li>
             <li>
-            <Link to="/conditionals-reducer">Conditionals with Reducers</Link>
+              <Link to="/conditionals-reducer">Conditionals with Reducers</Link>
             </li>
           </ul>
         </nav>
@@ -88,7 +90,17 @@ const Rout = () => {
             path="/conditionals-reducer/exercise-three"
             element={<CondR03 />}
           />
-        </Routes>
+          <Route
+            path="/conditionals-reducer/exercise-four"
+            element={<CondR04 />}
+          />
+        <Route
+            path="/conditionals-reducer/exercise-five"
+            element={<CondR05 />}
+            />
+        
+        
+          </Routes>
       </HashRouter>
     </div>
   );
