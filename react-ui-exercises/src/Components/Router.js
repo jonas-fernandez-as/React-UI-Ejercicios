@@ -29,6 +29,9 @@ import CondR02 from "../pages/condR02";
 import CondR03 from "../pages/condR03";
 import CondR04 from "../pages/condR04";
 import CondR05 from "../pages/condR05";
+import CondR06 from "../pages/condR06";
+import UseERoutes from "./UseERoutes";
+import PUseEffect01 from "../pages/pUseEffect01";
 const Rout = () => {
   return (
     <div>
@@ -47,6 +50,9 @@ const Rout = () => {
             </li>
             <li>
               <Link to="/conditionals-reducer">Conditionals with Reducers</Link>
+            </li>
+            <li>
+              <Link to="/use-effect">Use effect exercises</Link>
             </li>
           </ul>
         </nav>
@@ -98,8 +104,20 @@ const Rout = () => {
             path="/conditionals-reducer/exercise-five"
             element={<CondR05 />}
             />
+            <Route
+            path="/conditionals-reducer/exercise-six"
+            element={<CondR06 />}
+            />
+              <Route
+            path="/use-effect"
+            element={<UseERoutes />}
+          />
+        <Route
+            path="/use-effect/exercise-one"
+            element={<PUseEffect01/>}
+          />
         
-        
+          
           </Routes>
       </HashRouter>
     </div>
