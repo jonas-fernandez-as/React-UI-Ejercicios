@@ -7,7 +7,7 @@ export default function PUseEffect01() {
     <hr />
 
     <h2>Major of 10</h2>
-    <h6>Conditional exercise with useEffect</h6>
+    <h6>Exercise with useEffect</h6>
 
     <ExUseEffect01/>
   </div>

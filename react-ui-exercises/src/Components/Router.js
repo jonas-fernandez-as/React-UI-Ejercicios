@@ -32,6 +32,9 @@ import CondR05 from "../pages/condR05";
 import CondR06 from "../pages/condR06";
 import UseERoutes from "./UseERoutes";
 import PUseEffect01 from "../pages/pUseEffect01";
+import PUseEffect02 from "../pages/pUseEffect02";
+import PUseEffect03 from "../pages/pUseEffect03";
+import PUseEffect04 from "../pages/pUseEffect04";
 const Rout = () => {
   return (
     <div>
@@ -100,25 +103,20 @@ const Rout = () => {
             path="/conditionals-reducer/exercise-four"
             element={<CondR04 />}
           />
-        <Route
+          <Route
             path="/conditionals-reducer/exercise-five"
             element={<CondR05 />}
-            />
-            <Route
+          />
+          <Route
             path="/conditionals-reducer/exercise-six"
             element={<CondR06 />}
-            />
-              <Route
-            path="/use-effect"
-            element={<UseERoutes />}
           />
-        <Route
-            path="/use-effect/exercise-one"
-            element={<PUseEffect01/>}
-          />
-        
-          
-          </Routes>
+          <Route path="/use-effect" element={<UseERoutes />} />
+          <Route path="/use-effect/exercise-one" element={<PUseEffect01 />} />
+          <Route path="/use-effect/exercise-two" element={<PUseEffect02 />} />
+          <Route path="/use-effect/exercise-three" element={<PUseEffect03 />} />
+          <Route path="/use-effect/exercise-four" element={<PUseEffect04 />} />
+        </Routes>
       </HashRouter>
     </div>
   );
