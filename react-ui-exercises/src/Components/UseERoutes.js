@@ -18,6 +18,12 @@ const UseERoutes = () => {
             <li>
               <Link to="/use-effect/exercise-four">Four</Link>
             </li>
+            <li>
+              <Link to="/use-effect/exercise-five">Five</Link>
+            </li>
+            <li>
+              <Link to="/use-effect/exercise-six">Six</Link>
+            </li>
            </ul>
         </nav>
         

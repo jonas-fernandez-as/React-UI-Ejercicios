@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import "./ExUseEffect04.css";
 
 let major = null;
-let indek = null;
 let numbers = [];
 let primes = [];
 
@@ -19,7 +18,7 @@ export default function ExUseEffect04() {
       ? (document.getElementById("msg").innerText = `No prime numbers`)
       : (document.getElementById(
           "msg"
-        ).innerText = `The major of prime numbers is ${major} and the index is`);
+        ).innerText = `The major of prime numbers is ${major} and the index is ${result} `);
     numbers.length === 10 ? setDisabled(true) : setDisabled(false);
   }, [form]);
 
@@ -54,19 +53,24 @@ export default function ExUseEffect04() {
     e.target.reset();
   };
 
-  numbers.map((el, index) => {
-    el === major ? (indek = index) : (indek = 0);
+  let orden= numbers.map((el, index) => {
+    return el === major ? (index+1) : ("");
   });
-  console.log(indek);
+  
+ let result=orden.filter((item)=>{
+  return item !== "";
+ })
+
+ //console.log(result)
+
   //console.log(numbers)
   return (
     <div className="condUse-effect04">
       <h3>Exercise Three - useEffect</h3>
       <p>
         <i>
-          Challenge: make a program that you be able to put twenty numbers and
-          count how many positives there are, return a message with quantity of
-          positive numbers.
+          Challenge: make a program that able you to put ten numbers and
+           return : a message with the major of prime numbers and her index  .
         </i>
       </p>
 

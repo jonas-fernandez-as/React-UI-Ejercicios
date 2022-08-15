@@ -35,6 +35,8 @@ import PUseEffect01 from "../pages/pUseEffect01";
 import PUseEffect02 from "../pages/pUseEffect02";
 import PUseEffect03 from "../pages/pUseEffect03";
 import PUseEffect04 from "../pages/pUseEffect04";
+import PUseEffect05 from "../pages/pUseEffect05";
+import PUseEffect06 from "../pages/pUseEffect06";
 const Rout = () => {
   return (
     <div>
@@ -116,6 +118,8 @@ const Rout = () => {
           <Route path="/use-effect/exercise-two" element={<PUseEffect02 />} />
           <Route path="/use-effect/exercise-three" element={<PUseEffect03 />} />
           <Route path="/use-effect/exercise-four" element={<PUseEffect04 />} />
+          <Route path="/use-effect/exercise-five" element={<PUseEffect05 />} />
+          <Route path="/use-effect/exercise-six" element={<PUseEffect06 />} />
         </Routes>
       </HashRouter>
     </div>

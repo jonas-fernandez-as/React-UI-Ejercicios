@@ -1,0 +1,55 @@
+.condUse-effect05{
+ color:#222;
+ text-align: center;
+ background-color: #ddd;
+ padding:.2rem;
+ margin: 1rem;
+ border:1px solid #000 
+}
+
+.condUse-effect05 h3{
+ display: inline-block;
+ background-color:#61dafb;
+ padding:.5rem ;
+ border-radius: 0.25rem
+}
+input[type=button],
+input[type=text]{
+ padding:.1rem;
+ outline:none;
+ border-radius:0.25rem;
+ border:0.5px solid #777;
+ background-color: #fff;
+}
+input[type=button],
+input[type=submit]{
+ background-color: #fff;
+ outline:none;
+ border-radius:0.25rem;
+ border:0.5px solid #777;
+ padding:0.25rem;
+ cursor:pointer;
+ margin:.2rem;
+}
+input[type=submit]:hover{
+ background-color: #ffffff90;
+ color: #00000090;
+}
+
+li {
+ color:#000 !important
+}
+
+.visible{
+ visibility: hidden;
+}
+
+#contador-{
+ position: relative;
+ bottom:  +1.98rem;
+}
+
+#contador-5{
+ position: relative;
+ bottom:  +1.98rem;
+}
